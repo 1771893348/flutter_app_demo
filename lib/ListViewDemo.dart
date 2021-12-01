@@ -9,7 +9,7 @@ class ListViewDemo extends StatelessWidget {
         itemCount: listData.length,
         itemBuilder: (context, index) {
           return ListTile(
-              leading: Image.network(listData[index]["imageUrl"]),
+              leading: Image.network(listData[index]["imageUrl"],width: 50,height: 30,),
               title: Row(
                 children: [
                   Text(listData[index]["title"]),
@@ -21,7 +21,8 @@ class ListViewDemo extends StatelessWidget {
                   Icon(Icons.accessible),
                   Text(listData[index]["content"])
                 ],
-              )
+              ),
+              trailing:Image.asset("images/image_beauty.jpg",width: 50,height: 50,)
           );
         }
     );
