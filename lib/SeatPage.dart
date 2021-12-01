@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_app_demo/GridViewDemo.dart';
 
 import 'ListViewDemo.dart';
 class SeatPage extends StatefulWidget{
@@ -47,7 +48,7 @@ class _SeatPage extends State with SingleTickerProviderStateMixin{
               child: ListViewDemo(),
             ),
             Center(
-              child: Text("two"),
+              child: GridViewDemo(),
             ),
             Center(
               child: Text("Three"),
