@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import 'ListViewDemo.dart';
 class SeatPage extends StatefulWidget{
   @override
   State<StatefulWidget> createState() {
@@ -25,7 +27,7 @@ class _SeatPage extends State with SingleTickerProviderStateMixin{
           tabs: [
             Tab(
               icon: Icon(Icons.add_road),
-              text: "addroad",
+              text: "list",
             ),
             Tab(
               icon: Icon(Icons.account_tree),
@@ -41,8 +43,8 @@ class _SeatPage extends State with SingleTickerProviderStateMixin{
         body: TabBarView(
           controller: tabController,
           children: [
-            Center(
-              child: Text("one"),
+            Container(
+              child: ListViewDemo(),
             ),
             Center(
               child: Text("two"),
