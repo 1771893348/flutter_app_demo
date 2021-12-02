@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app_demo/GridViewDemo.dart';
 
 import 'ListViewDemo.dart';
+import 'StreamDemo.dart';
 class SeatPage extends StatefulWidget{
   @override
   State<StatefulWidget> createState() {
@@ -51,7 +52,7 @@ class _SeatPage extends State with SingleTickerProviderStateMixin{
               child: GridViewDemo(),
             ),
             Center(
-              child: Text("Three"),
+              child: StreamDemo(),
             )
           ],
         ),
