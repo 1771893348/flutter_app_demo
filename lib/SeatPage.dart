@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app_demo/GridViewDemo.dart';
 
 import 'ListViewDemo.dart';
+import 'RefreshDemo.dart';
 import 'StreamDemo.dart';
 class SeatPage extends StatefulWidget{
   @override
@@ -16,7 +17,7 @@ class _SeatPage extends State with SingleTickerProviderStateMixin{
   @override
   void initState() {
     super.initState();
-    tabController = TabController(length: 3, vsync: this);
+    tabController = TabController(length: 4, vsync: this);
   }
   @override
   Widget build(BuildContext context) {
@@ -39,6 +40,10 @@ class _SeatPage extends State with SingleTickerProviderStateMixin{
               icon: Icon(Icons.ac_unit),
               text: "ac_unit",
             ),
+            Tab(
+              icon: Icon(Icons.account_balance),
+              text: "account_balance",
+            ),
           ],
         ),
       ),
@@ -53,6 +58,9 @@ class _SeatPage extends State with SingleTickerProviderStateMixin{
             ),
             Center(
               child: StreamDemo(),
+            ),
+            Center(
+              child: RefreshDemo(),
             )
           ],
         ),
