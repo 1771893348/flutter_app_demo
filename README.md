@@ -14,3 +14,9 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+flutter的组件太多，先一个个体验一下，然后熟悉他的开发方式，先从组件开始，然后就是dart语言的深入理解，然后设计软件框架和架构
+SingleChildScrollView:
+处理短距离超出屏幕范围，不支持Sliver（薄片）的延迟构建模型，滑动太多会卡顿，长距离滑动使用支持Sliver的ListView、GridView，
+至于它的使用方法，可以查看源码属性，支持横竖，支持controller
+Stream为dart异步操作的库，有点类似rxjava
