@@ -1,24 +1,28 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app_demo/GridViewDemo.dart';
+import 'package:flutter_app_demo/MyViewDemo.dart';
 
 import 'ListViewDemo.dart';
 import 'RefreshDemo.dart';
 import 'StreamDemo.dart';
-class SeatPage extends StatefulWidget{
+
+class SeatPage extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
     return _SeatPage();
   }
-
 }
-class _SeatPage extends State with SingleTickerProviderStateMixin{
+
+class _SeatPage extends State with SingleTickerProviderStateMixin {
   late TabController tabController;
+
   @override
   void initState() {
     super.initState();
-    tabController = TabController(length: 4, vsync: this);
+    tabController = TabController(length: 5, vsync: this);
   }
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -27,6 +31,7 @@ class _SeatPage extends State with SingleTickerProviderStateMixin{
         title: Text("座位"),
         bottom: TabBar(
           controller: tabController,
+          isScrollable: true,
           tabs: [
             Tab(
               icon: Icon(Icons.add_road),
@@ -44,27 +49,33 @@ class _SeatPage extends State with SingleTickerProviderStateMixin{
               icon: Icon(Icons.account_balance),
               text: "account_balance",
             ),
+            Tab(
+              icon: Icon(Icons.account_balance),
+              text: "myview",
+            ),
           ],
         ),
       ),
-        body: TabBarView(
-          controller: tabController,
-          children: [
-            Container(
-              child: ListViewDemo(),
-            ),
-            Center(
-              child: GridViewDemo(),
-            ),
-            Center(
-              child: StreamDemo(),
-            ),
-            Center(
-              child: RefreshDemo(),
-            )
-          ],
-        ),
+      body: TabBarView(
+        controller: tabController,
+        children: [
+          Container(
+            child: ListViewDemo(),
+          ),
+          Center(
+            child: GridViewDemo(),
+          ),
+          Center(
+            child: StreamDemo(),
+          ),
+          Center(
+            child: RefreshDemo(),
+          ),
+          Center(
+            child: MyViewDemo(),
+          )
+        ],
+      ),
     );
   }
-
 }

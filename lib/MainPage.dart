@@ -43,6 +43,12 @@ class MainPage extends StatelessWidget {
             ],
           ),
         ),
+        floatingActionButton: FloatingActionButton(
+          child: Icon(Icons.add),
+          onPressed: () {
+            print('go to add dilog');
+          },
+        ),
       ),
     );
   }
@@ -51,10 +57,12 @@ class MainPage extends StatelessWidget {
 class ItemCard extends StatelessWidget {
   var item_name = '';
   var bg_color;
+  String tapType = "";
 
-  ItemCard(String name, {Color color = Colors.blue}) {
+  ItemCard(String name, {Color color = Colors.blue, String type = ""}) {
     item_name = name;
     bg_color = color;
+    tapType = type;
   }
 
   @override
@@ -79,7 +87,14 @@ class ItemCard extends StatelessWidget {
             ),
           ),
           onTap: () {
-            Navigator.of(context).pushNamed("SeatPage");
+            switch (tapType) {
+              case "seat":
+                // Navigator.of(context).pushNamed("SeatPage");
+                break;
+              default:
+                Navigator.of(context).pushNamed("SeatPage");
+                break;
+            }
           },
         ));
   }
