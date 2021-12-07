@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app_demo/GridViewDemo.dart';
+import 'package:flutter_app_demo/InterfaceDemo.dart';
 import 'package:flutter_app_demo/MyViewDemo.dart';
 
 import 'ListViewDemo.dart';
@@ -20,7 +21,7 @@ class _SeatPage extends State with SingleTickerProviderStateMixin {
   @override
   void initState() {
     super.initState();
-    tabController = TabController(length: 5, vsync: this);
+    tabController = TabController(length: 6, vsync: this);
   }
 
   @override
@@ -53,6 +54,10 @@ class _SeatPage extends State with SingleTickerProviderStateMixin {
               icon: Icon(Icons.account_balance),
               text: "myview",
             ),
+            Tab(
+              icon: Icon(Icons.account_circle_rounded),
+              text: "testInterface",
+            ),
           ],
         ),
       ),
@@ -73,6 +78,9 @@ class _SeatPage extends State with SingleTickerProviderStateMixin {
           ),
           Center(
             child: MyViewDemo(),
+          ),
+          Center(
+            child: InterfaceDemo(),
           )
         ],
       ),

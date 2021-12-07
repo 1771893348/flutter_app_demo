@@ -20,6 +20,8 @@ SingleChildScrollView:
 处理短距离超出屏幕范围，不支持Sliver（薄片）的延迟构建模型，滑动太多会卡顿，长距离滑动使用支持Sliver的ListView、GridView，
 至于它的使用方法，可以查看源码属性，支持横竖，支持controller
 Stream为dart异步操作的库，有点类似rxjava
+dart也是面向对象语言，应该也有类似的设计模式
+2021-12-7 尝试简单的观察者设计模式
 
 ![首页面](scream/mainpage.png "首页面")
 ![座位页面](scream/seatpage.png "座位页面")
