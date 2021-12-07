@@ -17,18 +17,30 @@ class UpdateDialog extends Dialog {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Container(
-            color:Colors.green,
+            decoration: new BoxDecoration(
+              image: DecorationImage(
+                  image: ExactAssetImage('images/image_beauty.jpg'),
+                  fit: BoxFit.cover,
+              ),
+              //背景
+              color: Colors.white,
+              //设置四周圆角 角度
+              borderRadius: BorderRadius.all(Radius.circular(10.0)),
+              //设置四周边框
+              border: new Border.all(width: 1, color: Colors.red),
+            ),
+            // color: Colors.green,
             width: 319,
             height: 370,
             child: Stack(
-              alignment:AlignmentDirectional.topCenter,
+              alignment: AlignmentDirectional.topCenter,
               children: [
-                Image.asset(
-                  "images/image_beauty.jpg",
-                  width: 319,
-                  height: 370,
-                  fit: BoxFit.cover,
-                ),
+                // Image.asset(
+                //   "images/image_beauty.jpg",
+                //   width: 319,
+                //   height: 370,
+                //   fit: BoxFit.cover,
+                // ),
                 Column(
                   children: [
                     Expanded(flex: 1, child: Text("wgw")),
