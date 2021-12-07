@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app_demo/dialogs/UpdateDialog.dart';
 
 class MainPage extends StatelessWidget {
   @override
@@ -47,10 +48,22 @@ class MainPage extends StatelessWidget {
           child: Icon(Icons.add),
           onPressed: () {
             print('go to add dilog');
+            showDialog(
+                context: context,
+                builder: (context) {
+                  return WillPopScope(
+                    child: UpdateDialog(content: "wgw", force: true),
+                    onWillPop: _onWillPop,
+                  );
+                });
           },
         ),
       ),
     );
+  }
+
+  Future<bool> _onWillPop() async {
+    return false;
   }
 }
 
