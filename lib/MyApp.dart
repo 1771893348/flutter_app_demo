@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app_demo/SeatPage.dart';
 import 'MainPage.dart';
 import 'MePage.dart';
+import 'NetDartPage.dart';
 
 class MyDemo extends StatefulWidget {
   @override
@@ -11,7 +12,7 @@ class MyDemo extends StatefulWidget {
 }
 
 class _MyDemo extends State {
-  var pageList = [MainPage(), MePage()];
+  var pageList = [MainPage(),NetDartPage(), MePage()];
   var pageIndex = 0;
 
   @override
@@ -24,7 +25,7 @@ class _MyDemo extends State {
         title: 'wgw',
         home: Scaffold(
           appBar: AppBar(
-            title: Text('huddd'),
+            title: Text('夺镖'),
           ),
           body: pageList[pageIndex],
           bottomNavigationBar: BottomNavigationBar(
@@ -32,6 +33,7 @@ class _MyDemo extends State {
             items: [
               BottomNavigationBarItem(
                   icon: Icon(Icons.access_alarm), label: '联系'),
+              BottomNavigationBarItem(icon:Icon(Icons.http),label: '网络'),
               BottomNavigationBarItem(icon: Icon(Icons.male), label: '我'),
             ],
             onTap: (index) {

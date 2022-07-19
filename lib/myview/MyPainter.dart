@@ -21,7 +21,7 @@ class MyPainter extends CustomPainter{
     Offset b = Offset(width,height);
     Offset centerPoint = Offset(width/2,height/2);
     _canvas!.drawLine(a, b, _paint);
-    _canvas!.drawCircle(centerPoint, 30, _paint);
+    _canvas!.drawCircle(centerPoint, height/2, _paint);
   }
 
   @override
