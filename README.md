@@ -27,6 +27,7 @@ dart也是面向对象语言，应该也有类似的设计模式
 2021-12-7 尝试简单的观察者设计模式
 
 Container圆角背景图DecorationImage的image设置本地图片ExactAssetImage
+```
 <iframe 
     height=450 
     width=800 
@@ -34,6 +35,7 @@ Container圆角背景图DecorationImage的image设置本地图片ExactAssetImage
     frameborder=0 
     'allowfullscreen'>
 </iframe>
-![录屏展示](<video src="scream/record.mp4" controls="controls" width="500" height="300">您的浏览器不支持播放该视频！</video>)
+```
+![录屏展示](scream/record.mp4)
 ![首页面](scream/mainpage.png "首页面")
 ![座位页面](scream/seatpage.png "座位页面")
