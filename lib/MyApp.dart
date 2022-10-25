@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_demo/SeatPage.dart';
+import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'MainPage.dart';
 import 'MePage.dart';
 import 'NetDartPage.dart';
@@ -43,6 +44,9 @@ class _MyDemo extends State {
               print("tap:$index");
             },
           ),
-        ));
+        ),
+      navigatorObservers: [FlutterSmartDialog.observer],
+        builder: FlutterSmartDialog.init(),
+    );
   }
 }
