@@ -36,6 +36,9 @@ Container圆角背景图DecorationImage的image设置本地图片ExactAssetImage
     'allowfullscreen'>
 </iframe>
 ```
+Dio网络请求框架
+SmartDialog弹框框架
+下一步IOC依赖注入框架
 ![录屏展示](scream/record.mp4)
 ![首页面](scream/mainpage.png "首页面")
 ![座位页面](scream/seatpage.png "座位页面")
