@@ -1,14 +1,11 @@
 buildscript {
     ext.kotlin_version = '1.4.32'
     repositories {
-        maven { url 'https://pd.zwc365.com/cfworker/https://dl.google.com/dl/android/maven2/' }
-        maven { url 'https://pd.zwc365.com/cfworker/https://jcenter.bintray.com' }
-        maven{ url 'https://maven.aliyun.com/repository/central' }
-        maven{ url 'https://maven.aliyun.com/repository/public' }
-        maven{ url 'https://maven.aliyun.com/repository/google' }
-        maven{ url 'https://maven.aliyun.com/repository/gradle-plugin' }
-        google()
-        jcenter()
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/jcenter' }
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public' }
+//        google()
+//        jcenter()
     }
 
     dependencies {
@@ -19,14 +16,17 @@ buildscript {
 
 allprojects {
     repositories {
-        maven { url 'https://pd.zwc365.com/cfworker/https://dl.google.com/dl/android/maven2/' }
-        maven { url 'https://pd.zwc365.com/cfworker/https://jcenter.bintray.com' }
-        maven{ url 'https://maven.aliyun.com/repository/central' }
-        maven{ url 'https://maven.aliyun.com/repository/public' }
-        maven{ url 'https://maven.aliyun.com/repository/google' }
-        maven{ url 'https://maven.aliyun.com/repository/gradle-plugin' }
-        google()
-        jcenter()
+//        maven { url 'https://pd.zwc365.com/cfworker/https://dl.google.com/dl/android/maven2/' }
+//        maven { url 'https://pd.zwc365.com/cfworker/https://jcenter.bintray.com' }
+//        maven{ url 'https://maven.aliyun.com/repository/central' }
+//        maven{ url 'https://maven.aliyun.com/repository/public' }
+//        maven{ url 'https://maven.aliyun.com/repository/google' }
+//        maven{ url 'https://maven.aliyun.com/repository/gradle-plugin' }
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/jcenter' }
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public' }
+//        google()
+//        jcenter()
     }
 }
 

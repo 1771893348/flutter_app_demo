@@ -1,4 +1,4 @@
 abstract class IButtonListener{
-  onPress();
-  onLongPress();
+  onPress(String tag);
+  onLongPress(String tag);
 }

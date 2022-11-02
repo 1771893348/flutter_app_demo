@@ -6,13 +6,15 @@ class CommonButton extends StatelessWidget{
 
   late Widget child=Text("点击");
   late IButtonListener? mListener;
+  String _tag='';
 
-  CommonButton({ Key? key ,Widget? v, IButtonListener? iButtonListener}){
+  CommonButton({ Key? key ,Widget? v,String tag="", IButtonListener? iButtonListener}){
     if(null == v){
       child = Text("点击");
     }else{
       child = v;
     }
+    _tag = tag;
     mListener = iButtonListener;
   }
   @override
@@ -20,7 +22,7 @@ class CommonButton extends StatelessWidget{
     return ElevatedButton(
         onPressed: ()=>{
         if(null != mListener){
-          mListener!.onPress()
+          mListener!.onPress(_tag)
         }
     }
     , child: child

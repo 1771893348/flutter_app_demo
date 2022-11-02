@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app_demo/GridViewDemo.dart';
 import 'package:flutter_app_demo/InterfaceDemo.dart';
 import 'package:flutter_app_demo/MyViewDemo.dart';
+import 'package:flutter_app_demo/ui/getxdemo/Counter.dart';
 
 import 'ListViewDemo.dart';
 import 'RefreshDemo.dart';
@@ -21,7 +22,7 @@ class _SeatPage extends State with SingleTickerProviderStateMixin {
   @override
   void initState() {
     super.initState();
-    tabController = TabController(length: 6, vsync: this);
+    tabController = TabController(length: 7, vsync: this);
   }
 
   @override
@@ -58,6 +59,10 @@ class _SeatPage extends State with SingleTickerProviderStateMixin {
               icon: Icon(Icons.account_circle_rounded),
               text: "testInterface",
             ),
+            Tab(
+              icon: Icon(Icons.account_circle_rounded),
+              text: "getxDemo",
+            ),
           ],
         ),
       ),
@@ -81,6 +86,9 @@ class _SeatPage extends State with SingleTickerProviderStateMixin {
           ),
           Center(
             child: InterfaceDemo(),
+          ),
+          Center(
+            child: Counter(),
           )
         ],
       ),
