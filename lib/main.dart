@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'MyApp.dart';
+import 'SeatPage.dart';
 
 void main() {
-  runApp(GetMaterialApp(home: MyDemo(),));
+  runApp(GetMaterialApp(
+    home: MyDemo(),
+    getPages: [
+        GetPage(name: '/SeatPage', page: ()=>SeatPage()),
+    ],
+  ));
 }
 
 class MyApp extends StatelessWidget {

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_demo/dialogs/UpdateDialog.dart';
+import 'package:get/get.dart';
 
 class MainPage extends StatelessWidget {
   @override
@@ -105,7 +106,8 @@ class ItemCard extends StatelessWidget {
                 // Navigator.of(context).pushNamed("SeatPage");
                 break;
               default:
-                Navigator.of(context).pushNamed("SeatPage");
+                // Navigator.of(context).pushNamed("SeatPage");
+                Get.toNamed("/SeatPage");
                 break;
             }
           },
