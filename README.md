@@ -38,7 +38,44 @@ Container圆角背景图DecorationImage的image设置本地图片ExactAssetImage
 ```
 Dio网络请求框架
 SmartDialog弹框框架
-下一步IOC依赖注入框架
+接入getx
+打包apk
+*********
+signingConfigs {
+
+        release {
+                keyAlias 'key'
+                keyPassword '123456'
+                storeFile file('key.jks')//此种写法默认key文件在android-app文件夹下
+                storePassword '123456'
+//            keyAlias keystoreProperties['keyAlias']
+//            keyPassword keystoreProperties['keyPassword']
+//            storeFile file(keystoreProperties['storeFile'])
+//            storePassword keystoreProperties['storePassword']
+}
+debug {
+keyAlias 'key'
+keyPassword '123456'
+storeFile file('key.jks')
+storePassword '123456'
+//            keyAlias keystoreProperties['keyAlias']
+//            keyPassword keystoreProperties['keyPassword']
+//            storeFile file(keystoreProperties['storeFile'])
+//            storePassword keystoreProperties['storePassword']
+}
+}
+buildTypes {
+release {
+signingConfig signingConfigs.release
+}
+debug {
+signingConfig signingConfigs.release
+}
+}
+
+***************
+输入命令：flutter build apk
+
 ![录屏展示](scream/record.mp4)
 ![首页面](scream/mainpage.png "首页面")
 ![座位页面](scream/seatpage.png "座位页面")
