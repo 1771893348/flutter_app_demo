@@ -23,9 +23,10 @@ class MainPage extends StatelessWidget {
                   ItemCard(
                     '301',
                     color: Colors.yellow,
+                    textColor: Colors.blue,
                   ),
-                  ItemCard('501', color: Colors.yellow),
-                  ItemCard('701', color: Colors.yellow),
+                  ItemCard('501', color: Colors.yellow,textColor: Colors.blue,),
+                  ItemCard('701', color: Colors.yellow,textColor: Colors.blue,),
                 ],
               ),
               Text("米老鼠"),
@@ -71,12 +72,14 @@ class MainPage extends StatelessWidget {
 class ItemCard extends StatelessWidget {
   var item_name = '';
   var bg_color;
+  var text_color;
   String tapType = "";
 
-  ItemCard(String name, {Color color = Colors.blue, String type = ""}) {
+  ItemCard(String name, {Color color = Colors.blue, Color textColor = Colors.white,String type = ""}) {
     item_name = name;
     bg_color = color;
     tapType = type;
+    text_color = textColor;
   }
 
   @override
@@ -86,16 +89,17 @@ class ItemCard extends StatelessWidget {
         flex: 1,
         child: InkWell(
           child: Card(
+            color: bg_color,
             margin: EdgeInsets.all(10),
             shape:
-                RoundedRectangleBorder(borderRadius: BorderRadius.circular(40)),
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(5.0)),
             child: Container(
               height: 100,
-              decoration: BoxDecoration(color: bg_color),
+              // decoration: BoxDecoration(color: bg_color),
               child: Center(
                 child: Text(
                   item_name,
-                  style: TextStyle(color: Color.fromARGB(255, 255, 255, 255)),
+                  style: TextStyle(color: text_color),
                 ),
               ),
             ),

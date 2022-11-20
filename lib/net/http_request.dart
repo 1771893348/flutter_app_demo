@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'package:flutter_app_demo/net/cookie_interceptor.dart';
 import 'package:flutter_app_demo/net/http_exception.dart';
 import 'package:flutter_app_demo/net/request_api.dart';
 import 'package:flutter_app_demo/typedef/function.dart';
@@ -6,6 +7,9 @@ import 'package:flutter_app_demo/typedef/function.dart';
 const int connectTimeOut =10000;
 const int receiveTimeOut = 10000;
 const int sendTimeOut = 10000;
+///
+///
+///
 class HttpRequest{
   static Dio? _dio;
   static Dio createInstance([bool isJson = false]){
@@ -24,6 +28,7 @@ class HttpRequest{
       );
       _dio = Dio(opt);
     }
+    _dio?.interceptors.add(CookieInterceptor());
     _dio?.options.contentType =
     isJson?Headers.jsonContentType:Headers.formUrlEncodedContentType;
     return _dio!;

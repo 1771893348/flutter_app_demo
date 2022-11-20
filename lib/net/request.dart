@@ -3,7 +3,9 @@ import 'package:flutter_app_demo/utils/toast_util.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 
 import 'http_request.dart';
-
+///
+///
+///
 class Request {
   static void get<T>(String path,
       {Map<String, dynamic>? params,
