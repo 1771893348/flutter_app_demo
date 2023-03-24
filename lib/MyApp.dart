@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_demo/SeatPage.dart';
+import 'package:flutter_app_demo/blues/FlutterBlueApp.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'MainPage.dart';
 import 'MePage.dart';
 import 'NetDartPage.dart';
+import 'blues/BlueIcon.dart';
 
 class MyDemo extends StatefulWidget {
   @override
@@ -27,6 +29,18 @@ class _MyDemo extends State {
         home: Scaffold(
           appBar: AppBar(
             title: Text('夺镖'),
+            actions: [
+              Container(
+                width:20,
+                height:20,
+                child: BlueIcon(()=>{
+
+                }),
+              ),
+              IconButton(onPressed: ()=>{
+
+              }, icon: Icon(Icons.add))
+            ],
           ),
           body: pageList[pageIndex],
           bottomNavigationBar: BottomNavigationBar(

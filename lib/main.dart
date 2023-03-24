@@ -2,12 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'MyApp.dart';
 import 'SeatPage.dart';
+import 'ui/login/LoginPage.dart';
+import 'ui/wel/WelcomePage.dart';
+import 'MyApp.dart';
+import 'blues/FlutterBlueApp.dart';
 
 void main() {
   runApp(GetMaterialApp(
-    home: MyDemo(),
+    home: WelcomePage(),
     getPages: [
+        GetPage(name: '/MyDemo', page: ()=>MyDemo()),
         GetPage(name: '/SeatPage', page: ()=>SeatPage()),
+        GetPage(name: '/LoginPage', page: ()=>LoginPage()),
+        GetPage(name: '/WelcomePage', page: ()=>WelcomePage()),
     ],
   ));
 }

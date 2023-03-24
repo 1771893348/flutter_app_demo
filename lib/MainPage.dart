@@ -13,7 +13,7 @@ class MainPage extends StatelessWidget {
               Text("高分赛"),
               Row(
                 children: [
-                  ItemCard('五轮高分赛', color: Colors.green),
+                  ItemCard('五轮高分赛', color: Colors.green,type: 'login'),
                   ItemCard('八轮高分赛', color: Colors.green)
                 ],
               ),
@@ -108,6 +108,9 @@ class ItemCard extends StatelessWidget {
             switch (tapType) {
               case "seat":
                 // Navigator.of(context).pushNamed("SeatPage");
+                break;
+              case "login":
+                Get.toNamed("/LoginPage");
                 break;
               default:
                 // Navigator.of(context).pushNamed("SeatPage");
