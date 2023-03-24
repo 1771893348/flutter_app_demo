@@ -13,6 +13,16 @@ class WelcomePage extends StatefulWidget{
 
 class WelcomeState extends State{
   @override
+  void initState(){
+    print("initState");
+    sleepTime().then((value){
+      print(value);
+      Get.offAllNamed("/MyDemo");
+    });
+    print("initState+++++");
+    super.initState();
+  }
+  @override
   Widget build(BuildContext context) {
 
     print("33333");
@@ -21,25 +31,16 @@ class WelcomeState extends State{
     );
   }
 
-  Future<String> sleepTime() async{
-    for(int i = 0;i<15;i++){
-      print("=====");
-      sleep(Duration(milliseconds:1));
-    }
+  Future<String> sleepTime(){
 
-    return "wgw";
+    return Future<String>((){
+            for(int i = 0;i<15;i++){
+              print("=====");
+              sleep(Duration(milliseconds:1000));
+            }
+            return "wgw";
+          });
   }
-
-    @override
-    void initState(){
-      print("initState");
-     sleepTime().then((value){
-       print(value);
-       Get.offAllNamed("/MyDemo");
-     });
-      super.initState();
-    }
-
     @override
     void didChaRngeDependencies(){
       print("didChangeDependencies");

@@ -33,8 +33,8 @@ class _MyDemo extends State {
               Container(
                 width:20,
                 height:20,
-                child: BlueIcon(()=>{
-
+                child: BlueIcon((){
+                      print("点击蓝牙");
                 }),
               ),
               IconButton(onPressed: ()=>{
